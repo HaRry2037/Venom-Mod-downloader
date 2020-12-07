@@ -70,6 +70,8 @@ for i in _final.find_all('a', class_='btn btn-secondary px-5'):
     venom = i.get('href')
     if venom.startswith('https://files.moddroid.com/') is True:
         final_link.append(venom)
+    elif venom.startswith('https://apple.spiderdown.com') is True:
+        final_link.append(venom)
     else:
         pass
 downloaded = os.system('wget ' + final_link[0])
